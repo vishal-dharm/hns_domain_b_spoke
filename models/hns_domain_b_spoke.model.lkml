@@ -7,6 +7,7 @@ include: "//hns_domain_b_hub/base_explores/events.explore.lkml"
 
 explore: +events {
   label: "Domain B Spoke: Events"
+  # fields: [-ALL_FIELDS*]
   join: users {
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;
